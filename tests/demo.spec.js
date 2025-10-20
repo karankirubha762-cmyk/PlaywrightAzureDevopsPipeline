@@ -2,6 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 // Write a test
+console.log('Running in environment:', process.env.ENVIRONMENT);
 test('Google test1', async({page}) =>{
   // Go to URL
  await page.goto('https://www.google.com/search?q=playwright+by+testers+talk');

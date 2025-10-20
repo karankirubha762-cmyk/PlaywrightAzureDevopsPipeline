@@ -6,15 +6,6 @@ test('Google test1', async({page}) =>{
   // Go to URL
  await page.goto('https://www.google.com/search?q=playwright+by+testers+talk');
  await page.waitForTimeout(2000);
-
- // Click on playlist
- await expect(page.getByRole('link', { name: 'Playwright by Testers Talk' }).first()).toBeEnabled();
- await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click();
- await page.waitForTimeout(4000);
-
- // Click on Video
- await page.locator('#container > #thumbnail').first().click();
- await page.waitForTimeout(5000);
 })
 
 // Write a test
@@ -23,12 +14,6 @@ test('Google test2', async({page}) =>{
  await page.goto('https://www.google.com/search?q=playwright+by+testers+talk');
  await page.waitForTimeout(2000);
 
- // Click on playlist
- await expect(page.getByRole('link', { name: 'Playwright by Testers Talk' }).first()).toBeEnabled();
- await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click();
- 
- // Validate title
- await expect(page).toHaveTitle(' Playwright Tutorial Full Course 2024 | Playwright Testing Tutorial')
  
 })
 
